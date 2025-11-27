@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitrix24 Report Generator - AFP Marketing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">Bitrix24 Report</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#features">Fonctionnalités</a>
+                <a href="#benefits">Avantages</a>
+                <a href="#pricing">Tarifs</a>
+                <a href="#download" class="nav-download">Télécharger</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Générez vos rapports Bitrix24<br><span class="highlight">en quelques secondes</span></h1>
+            <p class="hero-subtitle">Solution professionnelle pour automatiser vos rapports de ventes et prospection téléphonique</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="downloadBtn">Télécharger l'application</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">En savoir plus</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-illustration">
+                <div class="chart-bar bar-1"></div>
+                <div class="chart-bar bar-2"></div>
+                <div class="chart-bar bar-3"></div>
+                <div class="chart-bar bar-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <h2 class="section-title">Fonctionnalités principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Génération rapide</h3>
+                    <p>Créez des rapports détaillés en quelques secondes, sans configuration complexe</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Analyses complètes</h3>
+                    <p>Accédez à des données détaillées sur vos activités de vente et prospection</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Interface intuitive</h3>
+                    <p>Design moderne et facile à utiliser, même pour les novices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Synchronisation Bitrix24</h3>
+                    <p>Connectez-vous directement à votre compte Bitrix24 pour des données en temps réel</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Export flexible</h3>
+                    <p>Exportez vos rapports en PDF, Excel ou autres formats populaires</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Sécurisé</h3>
+                    <p>Vos données sont cryptées et traitées de manière sécurisée</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="section-container">
+            <h2 class="section-title">Avantages pour votre équipe</h2>
+            <div class="benefits-content">
+                <div class="benefit-item">
+                    <h3>Gagnez du temps</h3>
+                    <p>Automatisez la génération de rapports et concentrez-vous sur vos objectifs commerciaux. Économisez jusqu'à 5 heures par semaine.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Meilleures décisions</h3>
+                    <p>Accédez à des insights actionnables pour optimiser vos stratégies de vente et prospection téléphonique.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Augmentez la productivité</h3>
+                    <p>Les rapports automatisés permettent à votre équipe de se concentrer sur les activités à forte valeur ajoutée.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Suivi en temps réel</h3>
+                    <p>Suivez vos KPIs en temps réel et ajustez votre stratégie commerciale instantanément.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <h2 class="section-title">Plans et tarifs</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Essai gratuit</h3>
+                    <div class="price">Gratuit</div>
+                    <p class="price-description">7 jours d'accès complet</p>
+                    <ul class="pricing-features">
+                        <li>✓ Génération de rapports</li>
+                        <li>✓ 50 rapports par mois</li>
+                        <li>✓ Support par email</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="handleDownload()">Commencer</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Populaire</div>
+                    <h3>Pro</h3>
+                    <div class="price">29€<span>/mois</span></div>
+                    <p class="price-description">Pour les équipes de vente</p>
+                    <ul class="pricing-features">
+                        <li>✓ Rapports illimités</li>
+                        <li>✓ Exports multiformats</li>
+                        <li>✓ API intégrée</li>
+                        <li>✓ Support prioritaire</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="handleDownload()">Télécharger</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Entreprise</h3>
+                    <div class="price">Sur devis</div>
+                    <p class="price-description">Solutions personnalisées</p>
+                    <ul class="pricing-features">
+                        <li>✓ Tous les plans Pro</li>
+                        <li>✓ Équipe dédiée</li>
+                        <li>✓ Intégrations custom</li>
+                        <li>✓ SLA 99.9%</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="contactSales()">Nous contacter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="download">
+        <div class="section-container">
+            <h2>Prêt à transformer vos rapports Bitrix24 ?</h2>
+            <p>Rejoignez les entreprises qui font confiance à notre solution</p>
+            <button class="btn btn-primary btn-large" onclick="handleDownload()">Télécharger maintenant</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>À propos</h4>
+                    <p>Développé par <strong>AFP Marketing Inc.</strong></p>
+                    <p>Solution professionnelle pour la gestion des rapports Bitrix24</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#features">Fonctionnalités</a></li>
+                        <li><a href="#benefits">Avantages</a></li>
+                        <li><a href="#pricing">Tarifs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="mailto:support@afpmarketing.com">Support</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AFP Marketing Inc. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Télécharger l'application</h2>
+            <p>Sélectionnez votre système d'exploitation</p>
+            <div class="download-options">
+                <a href="#" class="download-option" onclick="downloadApp('windows')">
+                    <div class="download-icon">🪟</div>
+                    <div class="download-label">Windows</div>
+                </a>
+                <a href="#" class="download-option" onclick="downloadApp('mac')">
+                    <div class="download-icon">🍎</div>
+                    <div class="download-label">macOS</div>
+                </a>
+                <a href="#" class="download-option" onclick="downloadApp('linux')">
+                    <div class="download-icon">🐧</div>
+                    <div class="download-label">Linux</div>
+                </a>
+            </div>
+            <p class="system-info">Vous utilisez <span id="detectedOS"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
