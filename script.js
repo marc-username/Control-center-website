@@ -33,14 +33,18 @@ function closeModal() {
 // Télécharger l'application
 function downloadApp(os) {
     const downloadUrls = {
-        windows: 'https://example.com/download/windows',
-        mac: 'https://example.com/download/mac',
-        linux: 'https://example.com/download/linux'
+        // Fichiers locaux présents dans le répertoire du site
+        windows: 'Setup_BitrixRapport.exe',
+        mac: 'BitrixRapport.dmg',
+        linux: 'BitrixRapport.tar.gz'
     };
     
-    // Remplacez les URLs par vos vraies URLs de téléchargement
     const url = downloadUrls[os];
-    
+    if (!url) {
+        alert('Lien de téléchargement non disponible pour ce système.');
+        return closeModal();
+    }
+
     // Tracker l'événement (optionnel, pour Google Analytics, etc.)
     if (window.gtag) {
         gtag('event', 'download', {
@@ -48,13 +52,11 @@ function downloadApp(os) {
             'timestamp': new Date().toISOString()
         });
     }
-    
-    // Message de confirmation
-    alert(`Téléchargement de la version ${os.charAt(0).toUpperCase() + os.slice(1)} en cours...\n\nVeuillez configurer votre URL de téléchargement dans le code JavaScript.`);
-    
-    // Décommenter pour un vrai téléchargement:
-    // window.location.href = url;
-    
+
+    // Lancer le téléchargement (redirection relative vers le fichier local)
+    // Si vous ouvrez le fichier local directement (file://), certains navigateurs bloquent la redirection.
+    window.location.href = url;
+
     closeModal();
 }
 
