@@ -35,7 +35,7 @@ function downloadApp(os) {
     const downloadUrls = {
         // Fichiers locaux présents dans le répertoire du site
         windows: 'https://github.com/marc-username/Control-center-website/releases/download/tag/Setup_BitrixRapport.exe',
-        mac: 'https://github.com/marc-username/Control-center-website/releases/download/tag/BitrixRapport.dmg',
+        mac: 'https://github.com/marc-username/Generateur-de-rapport-4-bitrix/releases/download/dist/BitrixRapport.dmg',
         linux: 'BitrixRapport.tar.gz'
     };
     
